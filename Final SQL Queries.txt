@@ -1,0 +1,261 @@
+
+-- Dumping database structure for jdbc
+CREATE DATABASE IF NOT EXISTS `jdbc` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `jdbc`;
+
+-- Dumping structure for table jdbc.alogin
+CREATE TABLE IF NOT EXISTS `alogin` (
+  `Username` varchar(20) DEFAULT NULL,
+  `password` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table jdbc.alogin: ~1 rows (approximately)
+/*!40000 ALTER TABLE `alogin` DISABLE KEYS */;
+INSERT INTO `alogin` (`Username`, `password`) VALUES
+	('Admin', 'AdminAdmin');
+/*!40000 ALTER TABLE `alogin` ENABLE KEYS */;
+
+-- Dumping structure for table jdbc.amount
+CREATE TABLE IF NOT EXISTS `amount` (
+  `PNR` int(10) DEFAULT NULL,
+  `AMOUNT` decimal(8,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.booking
+CREATE TABLE IF NOT EXISTS `booking` (
+  `TrainNo` int(5) DEFAULT NULL,
+  `Name` varchar(30) DEFAULT NULL,
+  `Age` int(3) DEFAULT NULL,
+  `Gender` varchar(10) DEFAULT NULL,
+  `Birth` varchar(30) DEFAULT NULL,
+  `CoachType` varchar(20) DEFAULT NULL,
+  `DateofBooking` datetime DEFAULT NULL,
+  `PNR` int(10) DEFAULT NULL,
+  `SeatN` int(2) DEFAULT NULL,
+  `DOJ` datetime DEFAULT NULL,
+  `UN` varchar(20) DEFAULT NULL,
+  `AadharNo` decimal(12,0) DEFAULT NULL,
+  `Source` varchar(30) DEFAULT NULL,
+  `Destination` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.cancelticket
+CREATE TABLE IF NOT EXISTS `cancelticket` (
+  `TrainNo` int(5) DEFAULT NULL,
+  `Name` varchar(30) DEFAULT NULL,
+  `Age` int(3) DEFAULT NULL,
+  `Gender` varchar(10) DEFAULT NULL,
+  `Birth` varchar(30) DEFAULT NULL,
+  `CoachType` varchar(20) DEFAULT NULL,
+  `DateofBooking` datetime DEFAULT NULL,
+  `PNR` int(10) DEFAULT NULL,
+  `SeatN` int(2) DEFAULT NULL,
+  `DOJ` datetime DEFAULT NULL,
+  `UN` varchar(20) DEFAULT NULL,
+  `AadharNo` decimal(12,0) DEFAULT NULL,
+  `Source` varchar(30) DEFAULT NULL,
+  `Destination` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.cc
+CREATE TABLE IF NOT EXISTS `cc` (
+  `Cn` decimal(16,0) DEFAULT NULL,
+  `Edmm` int(2) DEFAULT NULL,
+  `Edyyyy` int(4) DEFAULT NULL,
+  `Chn` varchar(30) DEFAULT NULL,
+  `Pin` varchar(30) DEFAULT NULL,
+  `CVV` int(3) DEFAULT NULL,
+  `AMT` decimal(8,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.dc
+CREATE TABLE IF NOT EXISTS `dc` (
+  `Cn` decimal(16,0) DEFAULT NULL,
+  `Edmm` int(2) DEFAULT NULL,
+  `Edyyyy` int(4) DEFAULT NULL,
+  `Chn` varchar(30) DEFAULT NULL,
+  `Pin` varchar(30) DEFAULT NULL,
+  `CVV` int(3) DEFAULT NULL,
+  `AMT` decimal(8,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.idept
+CREATE TABLE IF NOT EXISTS `idept` (
+  `FromTo` varchar(30) DEFAULT NULL,
+  `Chennai` time DEFAULT NULL,
+  `Renigunta` time DEFAULT NULL,
+  `GuntakalJN` time DEFAULT NULL,
+  `Pune` time DEFAULT NULL,
+  `Mumbai` time DEFAULT NULL,
+  `GunturJN` time DEFAULT NULL,
+  `SecunderabadJN` time DEFAULT NULL,
+  `Hyderabaddecan` time DEFAULT NULL,
+  `BengaluruCant` time DEFAULT NULL,
+  `KSRBengaluru` time DEFAULT NULL,
+  `ErodeJN` time DEFAULT NULL,
+  `ErnakulamTown` time DEFAULT NULL,
+  `KollamJN` time DEFAULT NULL,
+  `TrivandrumCNTL` time DEFAULT NULL,
+  `VijayawadaJN` time DEFAULT NULL,
+  `Visakhapatnam` time DEFAULT NULL,
+  `KhurdaRoadJN` time DEFAULT NULL,
+  `KharagpurJN` time DEFAULT NULL,
+  `HowrahJN` time DEFAULT NULL,
+  `Balharshah` time DEFAULT NULL,
+  `BhopalJN` time DEFAULT NULL,
+  `NewDelhi` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table jdbc.idept: ~22 rows (approximately)
+/*!40000 ALTER TABLE `idept` DISABLE KEYS */;
+INSERT INTO `idept` (`FromTo`, `Chennai`, `Renigunta`, `GuntakalJN`, `Pune`, `Mumbai`, `GunturJN`, `SecunderabadJN`, `Hyderabaddecan`, `BengaluruCant`, `KSRBengaluru`, `ErodeJN`, `ErnakulamTown`, `KollamJN`, `TrivandrumCNTL`, `VijayawadaJN`, `Visakhapatnam`, `KhurdaRoadJN`, `KharagpurJN`, `HowrahJN`, `Balharshah`, `BhopalJN`, `NewDelhi`) VALUES
+	('Chennai', NULL, '12:20:00', '12:20:00', '12:20:00', '12:20:00', '16:45:00', '16:45:00', '16:45:00', '23:15:00', '23:15:00', '19:45:00', '19:45:00', '19:45:00', '19:45:00', '22:00:00', '16:50:00', '08:45:00', '08:45:00', '08:45:00', '22:00:00', '22:00:00', '22:00:00'),
+	('Renigunta', '16:40:00', NULL, '15:05:00', '15:05:00', '15:05:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('GuntakalJN', '11:10:00', '11:10:00', NULL, '20:40:00', '20:40:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('Pune', '00:10:00', '00:10:00', '00:10:00', NULL, '09:35:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('Mumbai', '20:30:00', '20:30:00', '20:30:00', '20:30:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('GunturJN', '03:20:00', NULL, NULL, NULL, NULL, NULL, '19:15:00', '19:15:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('SecunderabadJN', '17:15:00', NULL, NULL, NULL, NULL, '17:15:00', NULL, '05:20:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('Hyderabaddecan', '16:50:00', NULL, NULL, NULL, NULL, '16:50:00', '16:50:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('BengaluruCant', '22:52:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '04:35:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('KSRBengaluru', '22:40:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '22:40:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('ErodeJN', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '01:10:00', '01:10:00', '01:10:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('ErnakulamTown', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '06:50:00', '06:50:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('KollamJN', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '10:20:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('TrivandrumCNTL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('VijayawadaJN', '00:25:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '15:15:00', '15:15:00', '15:15:00', '15:15:00', '04:10:00', '04:10:00', '04:10:00'),
+	('Visakhapatnam', '18:20:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '04:20:00', NULL, '22:10:00', '22:10:00', '22:10:00', NULL, NULL, NULL),
+	('KhurdaRoadJN', '22:25:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '22:25:00', '22:25:00', NULL, '04:15:00', '04:15:00', NULL, NULL, NULL),
+	('KharagpurJN', '16:35:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '16:35:00', '16:35:00', '16:35:00', NULL, '09:50:00', NULL, NULL, NULL),
+	('HowrahJN', '14:50:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '14:50:00', '14:50:00', '14:50:00', '14:50:00', NULL, NULL, NULL, NULL),
+	('Balharshah', '17:40:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '17:40:00', NULL, NULL, NULL, NULL, NULL, '11:10:00', '11:10:00'),
+	('BhopalJN', '08:00:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '08:00:00', NULL, NULL, NULL, NULL, '08:00:00', NULL, '20:25:00'),
+	('NewDelhi', '22:30:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '22:00:00', NULL, NULL, NULL, NULL, '22:00:00', '22:00:00', NULL);
+/*!40000 ALTER TABLE `idept` ENABLE KEYS */;
+
+-- Dumping structure for table jdbc.ikm
+CREATE TABLE IF NOT EXISTS `ikm` (
+  `FromTo` varchar(30) DEFAULT NULL,
+  `Chennai` int(5) DEFAULT NULL,
+  `Renigunta` int(5) DEFAULT NULL,
+  `GuntakalJN` int(5) DEFAULT NULL,
+  `Pune` int(5) DEFAULT NULL,
+  `Mumbai` int(5) DEFAULT NULL,
+  `GunturJN` int(5) DEFAULT NULL,
+  `SECUNDERABADJN` int(5) DEFAULT NULL,
+  `HYDERABADDECAN` int(5) DEFAULT NULL,
+  `BengaluruCant` int(5) DEFAULT NULL,
+  `KSRBengaluru` int(5) DEFAULT NULL,
+  `ErodeJN` int(5) DEFAULT NULL,
+  `ERNAKULAMTOWN` int(5) DEFAULT NULL,
+  `KOLLAMJN` int(5) DEFAULT NULL,
+  `TRIVANDRUMCNTL` int(5) DEFAULT NULL,
+  `VIJAYAWADAJN` int(5) DEFAULT NULL,
+  `VISAKHAPATNAM` int(5) DEFAULT NULL,
+  `KHURDAROADJN` int(5) DEFAULT NULL,
+  `KHARAGPURJN` int(5) DEFAULT NULL,
+  `HOWRAHJN` int(5) DEFAULT NULL,
+  `Balharshah` int(5) DEFAULT NULL,
+  `BhopalJN` int(5) DEFAULT NULL,
+  `NewDelhi` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table jdbc.ikm: ~22 rows (approximately)
+/*!40000 ALTER TABLE `ikm` DISABLE KEYS */;
+INSERT INTO `ikm` (`FromTo`, `Chennai`, `Renigunta`, `GuntakalJN`, `Pune`, `Mumbai`, `GunturJN`, `SECUNDERABADJN`, `HYDERABADDECAN`, `BengaluruCant`, `KSRBengaluru`, `ErodeJN`, `ERNAKULAMTOWN`, `KOLLAMJN`, `TRIVANDRUMCNTL`, `VIJAYAWADAJN`, `VISAKHAPATNAM`, `KHURDAROADJN`, `KHARAGPURJN`, `HOWRAHJN`, `Balharshah`, `BhopalJN`, `NewDelhi`) VALUES
+	('Chennai', 12, 141, 451, 1092, 1284, 424, 706, 715, 358, 362, 396, 700, 858, 922, 431, 780, 1204, 1546, 1662, 880, 1487, 2188),
+	('Renigunta', 141, 0, 310, 951, 1143, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('GuntakalJN', 451, 310, 0, 500, 784, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('Pune', 1092, 951, 641, 0, 192, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('Mumbai', 1284, 1143, 833, 192, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('Hyderabaddecan', 715, NULL, NULL, NULL, NULL, 291, 9, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('KSRBengaluru', 362, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('TRIVANDRUMCNTL', 922, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 526, 222, 64, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('GunturJN', 424, NULL, NULL, NULL, NULL, 0, 282, 291, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('SECUNDERABADJN', 706, NULL, NULL, NULL, NULL, 282, 0, 9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('BengaluruCant', 358, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('ErodeJN', 396, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 304, 462, 526, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('ERNAKULAMTOWN', 700, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 303, 0, 158, 222, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('KOLLAMJN', 858, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 462, 158, 0, 64, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+	('HOWRAHJN', 1662, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1231, 882, 458, 116, 0, NULL, NULL, NULL),
+	('VijayawadaJN', 431, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 349, 773, 1115, 1231, 449, 1056, 1757),
+	('Visakhapatnam', 780, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 349, 0, 424, 766, 882, NULL, NULL, NULL),
+	('KhurdaRoadJN', 1204, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 773, 424, 0, 342, 458, NULL, NULL, NULL),
+	('KharagpurJN', 1546, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1115, 766, 342, 0, 116, NULL, NULL, NULL),
+	('Balharshah', 880, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 449, NULL, NULL, NULL, NULL, NULL, 607, 1308),
+	('BhopalJN', 1487, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1056, NULL, NULL, NULL, NULL, 607, NULL, 701),
+	('NewDelhi', 2188, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1757, NULL, NULL, NULL, NULL, 1308, 701, NULL);
+/*!40000 ALTER TABLE `ikm` ENABLE KEYS */;
+
+-- Dumping structure for table jdbc.login
+CREATE TABLE IF NOT EXISTS `login` (
+  `Username` varchar(20) DEFAULT NULL,
+  `password` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.nb
+CREATE TABLE IF NOT EXISTS `nb` (
+  `Username` varchar(30) DEFAULT NULL,
+  `Password` varchar(30) DEFAULT NULL,
+  `An` decimal(13,0) DEFAULT NULL,
+  `Rm` varchar(30) DEFAULT NULL,
+  `AMT` decimal(8,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.search
+CREATE TABLE IF NOT EXISTS `search` (
+  `Source` varchar(20) DEFAULT NULL,
+  `Destination` varchar(20) DEFAULT NULL,
+  `Date` date DEFAULT NULL,
+  `Dateofsearch` date DEFAULT NULL,
+  `NooFTickets` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.signup
+CREATE TABLE IF NOT EXISTS `signup` (
+  `Firstname` varchar(15) DEFAULT NULL,
+  `Lastname` varchar(15) DEFAULT NULL,
+  `Username` varchar(20) DEFAULT NULL,
+  `password` varchar(25) DEFAULT NULL,
+  `Dateofcreation` date DEFAULT NULL,
+  `MobileNo` varchar(10) DEFAULT NULL,
+  `Country` varchar(20) DEFAULT NULL,
+  `EMail` varchar(50) DEFAULT NULL,
+  `SQues` varchar(100) DEFAULT NULL,
+  `SAns` varchar(50) DEFAULT NULL,
+  `Address` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping structure for table jdbc.train
+CREATE TABLE IF NOT EXISTS `train` (
+  `Source` varchar(20) DEFAULT NULL,
+  `Destination` varchar(20) DEFAULT NULL,
+  `Trainno` int(5) DEFAULT NULL,
+  `Km` int(5) DEFAULT NULL,
+  `T_Name` varchar(20) DEFAULT NULL,
+  `DeptTime` time DEFAULT NULL,
+  `R1A` decimal(5,2) DEFAULT NULL,
+  `R2A` decimal(5,2) DEFAULT NULL,
+  `R3A` decimal(5,2) DEFAULT NULL,
+  `TravelTime` varchar(30) DEFAULT NULL,
+  `rs` decimal(8,2) DEFAULT NULL,
+  `IStation` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table jdbc.train: ~13 rows (approximately)
+/*!40000 ALTER TABLE `train` DISABLE KEYS */;
+INSERT INTO `train` (`Source`, `Destination`, `Trainno`, `Km`, `T_Name`, `DeptTime`, `R1A`, `R2A`, `R3A`, `TravelTime`, `rs`, `IStation`) VALUES
+	('Chennai', 'Mumbai', 11042, 1284, 'Mumbai Express', '12:20:00', 3.00, 2.00, 1.00, '27:00:00', 0.50, 'Chennai,Renigunta,GuntakalJN,Pune,Mumbai'),
+	('Chennai', 'Hyderabad', 12603, 715, 'Hyderabad Express', '16:45:00', 3.00, 2.00, 1.00, '13:10:00', 0.50, 'Chennai,GunturJN,SecunderabadJN,Hyderabaddecan'),
+	('Chennai', 'Bangalore', 12657, 362, 'Bangalore Mail', '23:15:00', 3.00, 2.00, 1.00, '06:00:00', 0.50, 'Chennai,BengaluruCant,KSRBengaluru'),
+	('Chennai', 'Trivandrum', 12623, 922, ' TRIVANDRUM MAIL', '19:45:00', 3.00, 2.00, 1.00, '17:25:00', 0.50, 'Chennai,ErodeJN,ERNAKULAMTOWN,KOLLAMJN,TRIVANDRUMCNTL'),
+	('Chennai', 'Howrah', 12842, 1649, 'Coromandal Express', '11:50:00', 3.00, 2.00, 1.00, '27:00:00', 0.50, 'Chennai,VijayawadaJN,Visakhapatnam,KhurdaroadJN,KharagpurJN,HowrahJN'),
+	('Chennai', 'Howrah', 12840, 1649, 'Howrah Mail', '23:45:00', 3.00, 2.00, 1.00, '27:00:00', 0.50, 'Chennai,VijayawadaJN,Visakhapatnam,KhurdaroadJN,KharagpurJN,HowrahJN'),
+	('Mumbai', 'Chennai', 12163, 1281, 'Chennai Express', '20:30:00', 3.00, 2.00, 1.00, '27:00:00', 0.50, 'Chennai,Renigunta,GuntakalJN,Pune,Mumbai'),
+	('Hyderabad', 'Chennai', 12604, 715, 'Chennai Express', '16:50:00', 3.00, 2.00, 1.00, '13:10:00', 0.50, 'Chennai,GunturJN,SecunderabadJN,Hyderabaddecan'),
+	('Bangalore', 'Chennai', 12658, 362, 'Chennai Mail', '22:40:00', 3.00, 2.00, 1.00, '06:00:00', 0.50, 'Chennai,BengaluruCant,KSRBengaluru'),
+	('Howrah', 'Chennai', 12841, 1649, 'Coromandal Express', '14:50:00', 3.00, 2.00, 1.00, '27:00:00', 0.50, 'Chennai,VijayawadaJN,Visakhapatnam,KhurdaroadJN,KharagpurJN,HowrahJN'),
+	('Chennai', 'New Delhi', 12621, 2182, 'Tamil Nadu Express', '22:00:00', 3.00, 2.00, 1.00, '33:05:00', 0.50, 'Chennai,VijayawadaJN,Balharshah,BhopalJN,NewDelhi'),
+	('New Delhi', 'Chennai', 12622, 2182, 'Tamil Nadu Express', '22:30:00', 3.00, 2.00, 1.00, '33:05:00', 0.50, 'Chennai,VijayawadaJN,Balharshah,BhopalJN,NewDelhi'),
+	('Howrah', 'Chennai', 12839, 1649, 'Hwh Mas Mail', '23:45:00', 3.00, 2.00, 1.00, '27:00:00', 0.50, 'Chennai,VijayawadaJN,Visakhapatnam,KhurudaroadJN,KharagpurJN,HowrahJN');
+/*!40000 ALTER TABLE `train` ENABLE KEYS */;
